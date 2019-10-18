@@ -15,7 +15,7 @@ h1{
         font-family: 'Chelsea Market', Georgia, serif;
         text-transform: lowercase;
 }
-h2{
+#le2{
     background-color: rgb(15, 196, 165);
     font-style: normal;
     border-radius: 20px;
@@ -36,11 +36,37 @@ p{
 }
 
 #lo{
-    background-color: rgb(32, 33, 56);
+    background-color: rgb(245, 245, 247);
     padding: 15px;
     margin-bottom: 10px;
     border-radius: 10px;
 }
 #letra{
-    color:red;
+    color:rgb(10, 1, 1);
+}
+#le1 {
+    color:rgb(10, 1, 1);
+}
+#le3{
+    background-color: rgb(6, 20, 18);
+    font-style: normal;
+    border-radius: 20px;
+    color: white;
+    padding: 5px 25px;
+    font-size: 1.5em;
+    font-family: monospace;
+    text-align: center;
+}
+#le4{
+    color:rgb(10, 1, 1);
+}
+#le5{
+    background-color: rgb(6, 20, 18);
+    font-style: normal;
+    border-radius: 20px;
+    color: white;
+    padding: 5px 25px;
+    font-size: 1.5em;
+    font-family: monospace;
+    text-align: center; 
 }
