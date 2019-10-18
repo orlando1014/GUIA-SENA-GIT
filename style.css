@@ -1,72 +1,22 @@
-*{
-    margin: 10px;
-    padding: 10px;
-}
-body{
-    font-family: 'Handlee', cursive;
-    font-size: 13pt;
-    background-color: #BFE4C4;;
-}
-h1{
-        font-size: 70px;
-        font-weight: normal;
-        margin: 0;
-        color: rgb(241, 239, 233);
-        font-family: 'Chelsea Market', Georgia, serif;
-        text-transform: lowercase;
-}
-#le2{
-    background-color: rgb(15, 196, 165);
-    font-style: normal;
-    border-radius: 20px;
-    color: white;
-    padding: 5px 25px;
-    font-size: 1.5em;
-    font-family: monospace;
-    text-align: center;
-}
-p{
-    color: rgb(245, 241, 191);
-}
-.section{
-    background-color: rgb(16, 30, 230);
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 10px;
+* {
+    padding: 0px;
+    margin: 0px;
 }
 
-#lo{
-    background-color: rgb(245, 245, 247);
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 10px;
+.container {
+    background-color: gray;
 }
-#letra{
-    color:rgb(10, 1, 1);
+
+.section {
+    background-color:gray;
+    color:black;
+    margin: auto;
+    width: 50%;
 }
-#le1 {
-    color:rgb(10, 1, 1);
-}
-#le3{
-    background-color: rgb(6, 20, 18);
-    font-style: normal;
-    border-radius: 20px;
-    color: white;
-    padding: 5px 25px;
-    font-size: 1.5em;
-    font-family: monospace;
-    text-align: center;
-}
-#le4{
-    color:rgb(10, 1, 1);
-}
-#le5{
-    background-color: rgb(6, 20, 18);
-    font-style: normal;
-    border-radius: 20px;
-    color: white;
-    padding: 5px 25px;
-    font-size: 1.5em;
-    font-family: monospace;
-    text-align: center; 
+
+.section1 {
+    background-color:gray;
+    color: black;
+    width: 50%;
+    margin: auto;
 }
