@@ -1,43 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <title>Guia Git</title>
-    <link rel="icon" type="image/png" href="icono.png">
 </head>
-
 <body class="container">
+    <div id="portada" class="section">
+<h1 id="texto-portada">git - la guía sencilla</h1>
+<h2 id="texto-por">una guía sencilla para comenzar con git. sin complicaciones ;)</h2>
+<br>
+<h2 id="texto-por">Elaborado Por:</h2>
+<h2 id="texto-por">ORLANDO CABRERA</h2>
+ <h2 id="texto-por">WILMER HOYOS</h2>
+<h2 id="texto-por">JEISON GUISAO</h2>
+<img src="img/arrow.png">
 
-    <center>
-        <p class="color"></p>Realizado por Wilmer Hoyos (Wilmer0315) <br>
-        Orlando Cabrera (Orlando1014) <br>
-        Jeison (Jeison-23)
-        </p>
-        <br>
-        <div class="section">
-            <h1>crea un repositorio nuevo</h1>
+    </div>
 
-            <p>Crea un directorio nuevo, ábrelo y ejecuta</p>
+     <div class="section">
+         <h1>crea un repositorio nuevo</h1>
 
-            <h2 id="le2"><span>Git init</span></h2>
-            <p>
-                Sirve para crear un nuevo repositorio de git.
+         <p>Crea un directorio nuevo, ábrelo y ejecuta</p>
+     
+         <h2 id="le2"><span>Git init</span></h2>
+         <p>
+             Sirve  para crear un nuevo repositorio de git.
+         </p>
+     </div>
+     <div id="lo"class="section">
+
+         <h1 id="letra">hacer checkout a un repositorio</h1>
+         <h2 id="le1">Crea una copia local del repositorio ejecutando</h2>
+        <h2 id="le3">git clone /path/to/repository</h2>
+        <h2 id="le4">Si utilizas un servidor remoto, ejecuta</h2>
+        <h2 id="le5">git clone username@host:/path/to/repository</h2>
+     </div>
+
+     <div id="lo1" class="section">
+         <h1 id="lo11">hacer checkout a un repositorio</h1>
+         <p id="lo111">
+                Tu repositorio local esta compuesto por tres "árboles" administrados por git.
+                El primero es tu <code>Directorio de trabajo</code> que contiene los archivos,
+                el segundo es el <code>Index</code> que actua como una zona intermedia, y el último es el
+                <code>HEAD</code> que apunta al último commit realizado.
             </p>
+            <img src="img/trees.png" alt="" />
+     </div>
+     <div id="loo1" class="section">
+            <h1>add &amp; commit</h1>
+            <h2 id="letra1234">
+                Puedes registrar cambios (añadirlos al<b> Index</b>) usando
+                <br>
+                <code id="w" >git add &lt;filename&gt;</code><br >
+                <code id="w">git add .</code><br>
+                Este es el primer paso en el flujo de trabajo básico. Para hacer commit a estos cambios usa<br>
+                <code id="w">git commit -m "Commit message"</code><br >
+                Ahora el archivo esta incluído en el <b>HEAD</b>, pero aún no en tu <br> repositorio remoto.
+            </h2>
         </div>
-
-        <div class="section1">
-            <h1 id="letra">hacer checkout a un repositorio</h1>
-            <h2 id="le1">Crea una copia local del repositorio ejecutando</h2>
-            <h2 id="le3">git clone /path/to/repository</h2>
-            <h2 id="le4">Si utilizas un servidor remoto, ejecuta</h2>
-            <h2 id="le5">git clone username@host:/path/to/repository</h2>
-
-        </div>
-    </center>
 </body>
-
 </html>
