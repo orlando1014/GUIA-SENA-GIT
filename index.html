@@ -40,12 +40,12 @@
      </div>
 
      <div id="lo1" class="section">
-         <h1 id="lo11">hacer checkout a un repositorio</h1>
+         <h1 id="lo11">flujo de trabajo</h1>
          <p id="lo111">
                 Tu repositorio local esta compuesto por tres "árboles" administrados por git.
-                El primero es tu <code>Directorio de trabajo</code> que contiene los archivos,
-                el segundo es el <code>Index</code> que actua como una zona intermedia, y el último es el
-                <code>HEAD</code> que apunta al último commit realizado.
+                El primero es tu <max>Directorio de trabajo</max> que contiene los archivos,
+                el segundo es el <max>Index</max> que actua como una zona intermedia, y el último es el
+                <max>HEAD</max> que apunta al último commit realizado.
             </p>
             <img src="img/trees.png" alt="" />
      </div>
@@ -54,12 +54,100 @@
             <h2 id="letra1234">
                 Puedes registrar cambios (añadirlos al<b> Index</b>) usando
                 <br>
-                <code id="w" >git add &lt;filename&gt;</code><br >
-                <code id="w">git add .</code><br>
+                <max id="w" >git add &lt;filename&gt;</max><br >
+                <max id="w">git add .</max><br>
                 Este es el primer paso en el flujo de trabajo básico. Para hacer commit a estos cambios usa<br>
-                <code id="w">git commit -m "Commit message"</code><br >
+                <max id="w">git commit -m "Commit message"</max><br >
                 Ahora el archivo esta incluído en el <b>HEAD</b>, pero aún no en tu <br> repositorio remoto.
             </h2>
         </div>
+        <div id="looo2" class="section">
+            <h1 id="rojo">envío de cambios</h1>
+            <h2 id="letra1234">
+                Tus cambios están ahora en el HEAD de tu copia local. Para enviar estos cambios a tu repositorio remoto ejecuta
+                <max id="w">push origin master </max> 
+                Reemplaza master por la rama a la que quieres enviar tus cambios.
+                <br>
+                <br>
+                Si no has clonado un repositorio ya existente y quieres conectar tu repositorio local a un repositorio remoto, usa<br>
+                <max id="w"> git remote add origin &lt;server&gt; </max> <br>
+                Ahora podrás subir tus cambios al repositorio remoto seleccionado.
+            </h2>
+        </div>
+        <div id="looo3" class="section">
+            <h1>ramas</h1>
+            <p id="lo111">Las ramas son utilizadas para desarrollar funcionalidades aisladas unas de otras. La rama master es la rama "por defecto" cuando creas un repositorio. Crea nuevas ramas durante el desarrollo y fusiónalas a la rama principal cuando termines.
+            </p>
+            <img src="img/branches.png">
+            <p id="lo111">Crea una nueva rama llamada "feature_x" y cámbiate a ella usando<br>
+            <max> git checkout -b feature_x </max><br>
+                vuelve a la rama principal<br>
+                <max> checkout master</max><br>
+                y borra la rama<br>
+            <max> git branch -d feature_x </max><br>
+                Una rama nueva no estará disponible para los demás a menos que subas (push)<br> la rama a tu repositorio remoto<br>
+            <max>git push origin &lt;branch&gt;</max>
+                </p>
+            </div>
+                <div id="otro" class="section">
+                    <h1 id="pq"> actualiza & fusiona  </h1>
+                    <h2>      
+                     Para actualizar tu repositorio local al commit más nuevo, ejecuta<br>
+                     <max id="w">git pull</max><br>
+                      en tu directorio de trabajo para bajar y fusionar los cambios remotos.<br>
+                      Para fusionar otra rama a tu rama activa (por ejemplo master), utiliza<br>
+                      <max id="w"> git merge &lt;branch&gt;</max><br>
+                      en ambos casos git intentará fusionar automáticamente los cambios.<br>
+                       Desafortunadamente, no siempre será posible y se podrán producir <br>
+                        conflictos. Tú eres responsable de fusionar esos conflictos manualmente<br>
+                         al editar los archivos mostrados por git. Después de modificarlos,<br>
+                          necesitas marcarlos como fusionados con<br>
+                      <max id="w"> git add &lt;filename&gt;</max><br>
+                    Antes de fusionar los cambios, puedes revisarlos usando<br>
+                    <max id="w">git diff &lt;source_branch&gt; &lt;target_branch&gt;</max><br>
+                    </h2>
+                </div>
+                <div id="ot1" class="section">
+                <h1 id="blue">etiquetas</h1>
+                <h2>Se recomienda crear etiquetas para cada nueva versión publicada de un <br>
+                     software. Este concepto no es nuevo, ya que estaba disponible en SVN. <br>
+                     Puedes crear una nueva etiqueta llamada 1.0.0 ejecutando<br>
+                     <max id="w"> git tag 1.0.0 1b2e1d63ff</max><br>
+                    1b2e1d63ff se refiere a los 10 caracteres del commit id al cual quieres<br>
+                     referirte con tu etiqueta. Puedes obtener el commit id con<br>
+                     <max id="w"> git log </max><br>
+                    también puedes usar menos caracteres que el commit id, pero debe ser<br>
+                     un valor único.</h2>  
+        </div>
+        <div id="ot2"class="section">
+            <h1 id="letra">reemplaza cambios locales  </h1>
+            <h2 id="we">En caso de que hagas algo mal (lo que seguramente nunca suceda ;)<br> puedes reemplazar cambios locales usando el comando<br>
+                <max id="w"> git checkout -- &lt;filename&gt;</max><br>
+                Este comando reemplaza los cambios en tu directorio de trabajo con el <br>último contenido de HEAD. Los cambios que ya han sido agregados al <br> Index, así como también los nuevos archivos, se mantendrán sin  <br> cambio.<br>
+                
+                Por otro lado, si quieres deshacer todos los cambios locales y commits,<br> puedes traer la última versión del servidor y apuntar a tu copia local<br> principal de esta forma<br>
+                <br>
+                <max id="w">git fetch origin</max><br>
+                <br>
+                <max id="w">git reset --hard origin/master </max><br>
+            </h2>
+        </div>
+        <div id="ot3"class="section">
+            <h1>datos útiles </h1>
+            <h2 id="kl">Interfaz gráfica por defecto<br>
+               <max id="w">   gitk   </max><br>
+                    Colores especiales para la consola<br>
+                    <max id="w">  git config color.ui true</max>  <br>
+                    Mostrar sólo una línea por cada commit en la traza<br>
+                    <max id="w"> git config format.pretty oneline</max> <br>
+                    Agregar archivos de forma interactiva<br>
+                    <max id="w">  git add -i </max> 
+            </h2>
+                </div>
+                <div id="ot4"class="section">
+                        <h1 id="REF">Terminada <br> Guia Sencilla De Git  </h1> 
+                        <img src="img/FIN.png">
+                </div>
+        
 </body>
 </html>
